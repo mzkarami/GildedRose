@@ -22,9 +22,9 @@ public class DefaultUpdator extends ItemUpdator {
         if (!isLowestQualityValueReached(item)) {
 
             if (sellByDateHasPassed(item)) {
-                item.quality = item.quality - 2;
+                decreaseQualityInValue(item, 2);
             } else {
-                item.quality = item.quality - 1;
+                decreaseQualityInValue(item, 1);
             }
         }
 

@@ -13,7 +13,8 @@ public class GildedRoseTest {
                 new Item("+5 Dexterity Vest", 10, 20), //
                 new Item("+5 Dexterity Vest", 0, 20), //
                 new Item("+5 Dexterity Vest", 1, 50), //
-                new Item("+5 Dexterity Vest", 0, 0)
+                new Item("+5 Dexterity Vest", 0, 0),
+                new Item("+5 Dexterity Vest", 0, 1)
         };
 
         GildedRose app = new GildedRose(items);
@@ -22,6 +23,7 @@ public class GildedRoseTest {
         assertEquals("+5 Dexterity Vest, -1, 18", app.items[1].toString());
         assertEquals("+5 Dexterity Vest, 0, 49", app.items[2].toString());
         assertEquals("+5 Dexterity Vest, -1, 0", app.items[3].toString());
+        assertEquals("+5 Dexterity Vest, -1, 0", app.items[4].toString());
     }
 
     @Test
@@ -33,7 +35,9 @@ public class GildedRoseTest {
                 new Item("Aged Brie", -1, 2), //
                 new Item("Aged Brie", -3, 5), //
                 new Item("Aged Brie", -5, 10), //
-                new Item("Aged Brie", -5, 50) //
+                new Item("Aged Brie", -5, 50), //
+                new Item("Aged Brie", -5, 49), //
+                new Item("Aged Brie", 0, 49) //
         };
 
         GildedRose app = new GildedRose(items);
@@ -45,6 +49,8 @@ public class GildedRoseTest {
         assertEquals("Aged Brie, -4, 7", app.items[4].toString());
         assertEquals("Aged Brie, -6, 12", app.items[5].toString());
         assertEquals("Aged Brie, -6, 50", app.items[6].toString());
+        assertEquals("Aged Brie, -6, 50", app.items[7].toString());
+        assertEquals("Aged Brie, -1, 50", app.items[8].toString());
     }
 
     @Test
@@ -56,7 +62,8 @@ public class GildedRoseTest {
                 new Item("Backstage passes to a TAFKAL80ETC concert", -1, 2), //
                 new Item("Backstage passes to a TAFKAL80ETC concert", -3, 5), //
                 new Item("Backstage passes to a TAFKAL80ETC concert", -5, 10), //
-                new Item("Backstage passes to a TAFKAL80ETC concert", -5, 50) //
+                new Item("Backstage passes to a TAFKAL80ETC concert", -5, 50), //
+                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49) //
         };
 
         GildedRose app = new GildedRose(items);
@@ -68,6 +75,7 @@ public class GildedRoseTest {
         assertEquals("Backstage passes to a TAFKAL80ETC concert, -4, 0", app.items[4].toString());
         assertEquals("Backstage passes to a TAFKAL80ETC concert, -6, 0", app.items[5].toString());
         assertEquals("Backstage passes to a TAFKAL80ETC concert, -6, 0", app.items[6].toString());
+        assertEquals("Backstage passes to a TAFKAL80ETC concert, 4, 50", app.items[7].toString());
     }
 
     @Test
@@ -76,7 +84,8 @@ public class GildedRoseTest {
                 new Item("Sulfuras, Hand of Ragnaros", 10, 20), //
                 new Item("Sulfuras, Hand of Ragnaros", 0, 20), //
                 new Item("Sulfuras, Hand of Ragnaros", 1, 50), //
-                new Item("Sulfuras, Hand of Ragnaros", 0, 0)
+                new Item("Sulfuras, Hand of Ragnaros", 0, 0),
+                new Item("Sulfuras, Hand of Ragnaros", 1, 49), //
         };
 
         GildedRose app = new GildedRose(items);
@@ -85,6 +94,7 @@ public class GildedRoseTest {
         assertEquals("Sulfuras, Hand of Ragnaros, 0, 20", app.items[1].toString());
         assertEquals("Sulfuras, Hand of Ragnaros, 1, 50", app.items[2].toString());
         assertEquals("Sulfuras, Hand of Ragnaros, 0, 0", app.items[3].toString());
+        assertEquals("Sulfuras, Hand of Ragnaros, 1, 49", app.items[4].toString());
     }
 
     @Test
@@ -93,7 +103,8 @@ public class GildedRoseTest {
                 new Item("Conjured Mana Cake", 10, 20), //
                 new Item("Conjured Mana Cake", 0, 20), //
                 new Item("Conjured Mana Cake", 1, 50), //
-                new Item("Conjured Mana Cake", 0, 0)
+                new Item("Conjured Mana Cake", 0, 0),
+                new Item("Conjured Mana Cake", 1, 1)
         };
 
         GildedRose app = new GildedRose(items);
@@ -102,6 +113,7 @@ public class GildedRoseTest {
         assertEquals("Conjured Mana Cake, -1, 16", app.items[1].toString());
         assertEquals("Conjured Mana Cake, 0, 48", app.items[2].toString());
         assertEquals("Conjured Mana Cake, -1, 0", app.items[3].toString());
+        assertEquals("Conjured Mana Cake, 0, 0", app.items[4].toString());
     }
 
     @Test(expected = IllegalArgumentException.class)

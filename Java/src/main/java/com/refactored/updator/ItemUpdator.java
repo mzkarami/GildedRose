@@ -38,6 +38,16 @@ public abstract class ItemUpdator {
         item.sellIn = item.sellIn - 1;
     }
 
+    void decreaseQualityInValue(final Item item, int decreaseBy) {
+
+        item.quality = Math.max(item.quality - decreaseBy, LOWEST_QUALITY);
+    }
+
+    void increaseQualityInValue(final Item item, int increaseBy) {
+
+        item.quality = Math.min(item.quality + increaseBy, HIGHEST_QUALITY);
+    }
+
     /**
      * Basisvalidatie:
      * <ol>

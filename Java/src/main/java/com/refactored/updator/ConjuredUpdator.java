@@ -20,9 +20,9 @@ public class ConjuredUpdator extends ItemUpdator {
         if (!isLowestQualityValueReached(item)) {
 
             if (sellByDateHasPassed(item)) {
-                item.quality = item.quality - 4;
+                decreaseQualityInValue(item, 4);
             } else {
-                item.quality = item.quality - 2;
+                decreaseQualityInValue(item, 2);
             }
         }
 

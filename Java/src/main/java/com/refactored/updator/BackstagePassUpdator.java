@@ -34,9 +34,9 @@ public class BackstagePassUpdator extends ItemUpdator {
             if (!isHighestQualityValueReached(item)) {
 
                 if (SELLIN_BETWEEN_10_AND_5.test(item)) {
-                    item.quality = item.quality + 2;
+                    increaseQualityInValue(item, 2);
                 } else if (SELLIN_BETWEEN_5_AND_0.test(item)) {
-                    item.quality = item.quality + 3;
+                    increaseQualityInValue(item, 3);
                 }
             }
         }

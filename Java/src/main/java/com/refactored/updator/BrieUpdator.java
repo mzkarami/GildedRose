@@ -19,9 +19,9 @@ public class BrieUpdator extends ItemUpdator {
         if (!isHighestQualityValueReached(item)) {
 
             if (sellByDateHasPassed(item)) {
-                item.quality = item.quality + 2;
+                increaseQualityInValue(item, 2);
             } else {
-                item.quality = item.quality + 1;
+                increaseQualityInValue(item, 1);
             }
         }
 
